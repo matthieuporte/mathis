@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+	<title>template</title>
+	<style>
+		*{
+			margin: 0;
+		}
+		hr{
+			margin: 0;
+		}
+		.accueil{
+		background: linear-gradient(
+		    rgba(0, 0, 0, 0.5), 
+		    rgba(0, 0, 0, 0.5)
+		  ),url('https://vignette.wikia.nocookie.net/zelda/images/a/a1/C%C3%A9lesbourg_2.png/revision/latest?cb=20130316143206&path-prefix=fr');
+		background-attachment: fixed;
+		background-position: left;
+		background-repeat: no-repeat;
+		background-size: cover;
+		}
+		#avatar{
+			width: 300px;
+			border-radius: 10px;
+			float: left;
+			margin-right: 20px;
+		}
+		#nom{
+			font-size: 4em;
+			margin-bottom: 40px; 
+		}
+		#card-presentation{
+			color: white;
+			width: 50%;
+		}
+		.footer{
+			padding: 2rem 1.5rem 3rem;
+		}
+		.container{
+			padding-left: 10vw;
+			padding-right: 10vw;
+		}
+		@media (max-width: 1000px){
+		  #avatar{
+		  	width: 100px;
+		  	border-radius: 10px;
+		  	float: left;
+		  	margin-right: 10px;
+		  }
+		  #nom{
+		  	font-size: 1.5em;
+				margin-bottom: 0; 
+		  }
+		  #card-presentation{
+		  	color: white;
+		  	width: 100%;
+		  }
+		}
+		.img-projet{
+			width: 100%;
+			background-size: cover;
+		}
+		.titre-projet{
+			font-size: 2em;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<section class="hero is-fullheight accueil">
+	<div class="hero-body">
+		<div id="card-presentation">
+			<img src="https://matthieuporte.github.io/images/mathis.jpg" id="avatar">
+			<h1 id="nom">Mathis Perot</h1>
+			<p id="bio">blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
+		</div>
+	</div>
+</section>
+<section class="hero" id="projets">
+	<div class="hero-body">
+		<div class="container">
+			<div class="projet" data-aos="fade-up-right" data-aos-anchor-placement="bottom-bottom">
+				<br><hr><br>
+				<div class="columns">
+				  <div class="column is-two-thirds">
+				    <img src="http://placehold.it/700x300" class="img-projet">
+				  </div>
+				  <div class="column">
+				    <h1 class="titre-projet">Titre</h1>
+				    <p>contenucontenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu  </p><br>
+				    <a class="button is-link">Visiter le site&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a></a>
+				  </div>
+				</div>	
+			</div>
+			<div class="projet">
+				<br><hr><br>
+				<div class="columns" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom">
+				  <div class="column is-two-thirds">
+				    <img src="http://placehold.it/700x300" class="img-projet">
+				  </div>
+				  <div class="column">
+				    <h1 class="titre-projet">Titre</h1>
+				    <p>contenucontenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu  </p><br>
+				    <a class="button is-link">Visiter le site&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a></a>
+				  </div>
+				</div>	
+			</div>
+			<div class="projet">
+				<br><hr><br>
+				<div class="columns" data-aos="fade-up-right" data-aos-anchor-placement="bottom-bottom">
+				  <div class="column is-two-thirds">
+				    <img src="http://placehold.it/700x300" class="img-projet">
+				  </div>
+				  <div class="column">
+				    <h1 class="titre-projet">Titre</h1>
+				    <p>contenucontenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu  </p><br>
+				    <a class="button is-link">Visiter le site&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a></a>
+				  </div>
+				</div>	
+			</div>
+		</div>
+	</div>
+</section>
+	<hr>
+    <footer class="footer">
+	  <div class="content has-text-centered">
+	    <p>
+	      <strong>Template</strong> by <a href="https://matthieuporte.github.io">Matthieu Porte</a>
+	    </p>
+	  </div>
+	</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="text/javascript">
+
+AOS.init();
+
+$( document ).ready(function() {
+
+	$(window).scroll(function () { 
+		if ($(this).scrollTop() < $(window).height()/1.3){
+	       $('#card-presentation').css({
+	          'margin-top' : +($(this).scrollTop()/3)*2+"px"
+	       }); 
+		}
+    });
+
+});    
+</script>
+</body>
+</html>
